@@ -11,6 +11,10 @@ export const ChartTopInfoContainer = styled.div`
   align-items: center;
   justify-content: space-between;
   margin: 0 20px 0 40px;
+
+  @media (max-width: 1350px) {
+    padding-top: 30px;
+  }
 `;
 
 export const ChartTitleContainer = styled.div``;
@@ -55,4 +59,19 @@ export const ChartContainer = styled.div`
   justify-content: center;
   margin-left: 40px;
   box-shadow: -16px 27px 17px -25px rgb(0, 0, 0, 0.24);
+`;
+
+export const ChartUnavailableContainer = styled.div`
+  width: 720px;
+  height: 355px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+`;
+
+export const ChartUnavailableMessage = styled.p`
+  color: black;
+  font-size: 30px;
 `;

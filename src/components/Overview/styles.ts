@@ -102,6 +102,15 @@ export const ChartContainer = styled.div`
   .graphTemp {
     flex: 2;
   }
+
+  @media (max-width: 1350px) {
+    flex-direction: column;
+    padding-bottom: 20px;
+  }
+
+  @media (max-width: 1090px) {
+    display: none;
+  }
 `;
 
 export const TablesContainer = styled.div`
