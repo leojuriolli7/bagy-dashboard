@@ -93,7 +93,7 @@ export function Sidebar() {
           </S.ListItem>
 
           <S.ListItem
-            onClick={() => navigate("/logout")}
+            onClick={() => navigate("/")}
             isSelected={history.pathname === "/logout"}
           >
             <S.LinkAndIconContainer>

@@ -87,3 +87,15 @@ export const LoadingText = styled.p`
   color: var(--black);
   font-size: 1.5rem;
 `;
+
+export const TablesContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 24px;
+  gap: 30px;
+
+  @media (max-width: 1180px) {
+    flex-direction: column;
+  }
+`;

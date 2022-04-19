@@ -8,4 +8,8 @@ export const PageContent = styled.div`
   width: 100vw;
   height: 100vh;
   padding: 30px 40px;
+
+  @media (max-width: 1180px) {
+    height: auto;
+  }
 `;

@@ -9,6 +9,7 @@ export const GlobalStyle = createGlobalStyle`
     --black: #252733;
     --grey: #9fa2b4;
     --light-grey: #DFE0EB;
+    --dark-grey: #677371;
 
   }
 
