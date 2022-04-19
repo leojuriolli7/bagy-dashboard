@@ -59,6 +59,9 @@ export const TableHead = styled.th`
       padding-right: 5px;
     }
   }
+  @media (max-width: 457px) {
+    padding-bottom: 7px;
+  }
 `;
 
 export const ProductData = styled.td`
@@ -76,7 +79,7 @@ export const ProductData = styled.td`
   }
 
   @media (max-width: 457px) {
-    padding: 25px 10px 25px 0;
+    padding: 30px 10px 25px 0;
   }
 
   @media (max-width: 360px) {

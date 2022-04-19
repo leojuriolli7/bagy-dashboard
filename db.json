@@ -6,6 +6,210 @@
     "monthlyGoal": "110.000,00",
     "totalIncome": "100.000,00"
   },
+  "stores": [
+    { "id": 1, "storeName": "Estilo Pri" },
+    { "id": 2, "storeName": "Vilma Calçados" },
+    { "id": 3, "storeName": "Mary Lingerie" },
+    { "id": 4, "storeName": "Loja Belíssima" }
+  ],
+  "chartInfo": [
+    {
+      "storeId": 1,
+      "store": "Estilo Pri",
+      "totalMonthIncome": "45.000,00",
+      "lastMonthIncome": "39.750,00",
+      "data": [
+        {
+          "day": 1,
+          "june": 32,
+          "july": 15
+        },
+        {
+          "day": 2,
+          "june": 34,
+          "july": 32
+        },
+        {
+          "day": 3,
+          "june": 30,
+          "july": 32
+        },
+        {
+          "day": 4,
+          "june": 26,
+          "july": 30
+        },
+        {
+          "day": 5,
+          "june": 22,
+          "july": 42
+        },
+        {
+          "day": 6,
+          "june": 25,
+          "july": 44
+        },
+        {
+          "day": 7,
+          "june": 27,
+          "july": 42
+        },
+        {
+          "day": 8,
+          "june": 30,
+          "july": 28
+        },
+        {
+          "day": 9,
+          "june": 32,
+          "july": 25
+        },
+        {
+          "day": 10,
+          "june": 31,
+          "july": 30
+        },
+        {
+          "day": 11,
+          "june": 30,
+          "july": 38
+        },
+        {
+          "day": 12,
+          "june": 26,
+          "july": 48
+        },
+        {
+          "day": 13,
+          "june": 23,
+          "july": 50
+        },
+        {
+          "day": 14,
+          "june": 18,
+          "july": 52
+        },
+        {
+          "day": 15,
+          "june": 24,
+          "july": 42
+        },
+        {
+          "day": 16,
+          "june": 28,
+          "july": 42
+        },
+        {
+          "day": 17,
+          "june": 40,
+          "july": 35
+        },
+        {
+          "day": 18,
+          "june": 34,
+          "july": 30
+        }
+      ]
+    },
+    {
+      "storeId": 2,
+      "store": "Vilma Calçados",
+      "totalMonthIncome": "93.500,00",
+      "lastMonthIncome": "105.350,00",
+      "data": [
+        {
+          "day": 1,
+          "june": 33,
+          "july": 45
+        },
+        {
+          "day": 2,
+          "june": 16,
+          "july": 33
+        },
+        {
+          "day": 3,
+          "june": 23,
+          "july": 25
+        },
+        {
+          "day": 4,
+          "june": 45,
+          "july": 14
+        },
+        {
+          "day": 5,
+          "june": 47,
+          "july": 21
+        },
+        {
+          "day": 6,
+          "june": 35,
+          "july": 26
+        },
+        {
+          "day": 7,
+          "june": 41,
+          "july": 55
+        },
+        {
+          "day": 8,
+          "june": 43,
+          "july": 45
+        },
+        {
+          "day": 9,
+          "june": 23,
+          "july": 56
+        },
+        {
+          "day": 10,
+          "june": 26,
+          "july": 30
+        },
+        {
+          "day": 11,
+          "june": 24,
+          "july": 9
+        },
+        {
+          "day": 12,
+          "june": 23,
+          "july": 14
+        },
+        {
+          "day": 13,
+          "june": 31,
+          "july": 45
+        },
+        {
+          "day": 14,
+          "june": 21,
+          "july": 65
+        },
+        {
+          "day": 15,
+          "june": 21,
+          "july": 34
+        },
+        {
+          "day": 16,
+          "june": 28,
+          "july": 42
+        },
+        {
+          "day": 17,
+          "june": 45,
+          "july": 35
+        },
+        {
+          "day": 18,
+          "june": 37,
+          "july": 12
+        }
+      ]
+    }
+  ],
   "all-sales": [
     {
       "id": 1,

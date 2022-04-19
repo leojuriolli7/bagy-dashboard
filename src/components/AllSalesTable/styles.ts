@@ -114,6 +114,8 @@ export const SalesTable = styled.table`
   }
 `;
 
+export const SalesTableBody = styled.tbody``;
+
 export const SalesTableRow = styled.tr`
   border-bottom: 1px solid #dfe0eb;
 
@@ -133,11 +135,11 @@ export const SalesData = styled.td`
   }
 
   @media (max-width: 470px) {
-    padding: 30px 15px;
+    padding: 33px 15px;
   }
 
   @media (max-width: 360px) {
-    padding: 30px 5px;
+    padding: 33px 5px;
   }
 `;
 

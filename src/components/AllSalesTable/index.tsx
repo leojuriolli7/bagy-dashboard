@@ -35,13 +35,16 @@ export function AllSalesTable({ allSales, setType }: any) {
         </S.SelectContainer>
       </S.SalesTableHeadContainer>
       <S.SalesTable>
-        {allSales?.data.map((sale: AllSalesDataInterface) => (
-          <S.SalesTableRow key={sale.id}>
-            <S.SalesHighlightData>{sale.store}</S.SalesHighlightData>
-            <S.SalesData>{`${sale.totalSales} compras`}</S.SalesData>
-            <S.SalesData>{`R$${sale.income}`}</S.SalesData>
-          </S.SalesTableRow>
-        ))}
+        <S.SalesTableBody>
+          {allSales?.data.map((sale: AllSalesDataInterface) => (
+            <S.SalesTableRow key={sale.id}>
+              <S.SalesHighlightData>{sale.store}</S.SalesHighlightData>
+              <S.SalesData>{`${sale.totalSales} compras`}</S.SalesData>
+              <S.SalesData>{`R$${sale.income}`}</S.SalesData>
+            </S.SalesTableRow>
+          ))}
+        </S.SalesTableBody>
+        <tfoot></tfoot>
       </S.SalesTable>
     </S.Container>
   );

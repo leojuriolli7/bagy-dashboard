@@ -1,6 +1,10 @@
 import styled from "styled-components";
 import arrowSvg from "../../assets/arrow.svg";
 
+interface MonthlyIncomeStatusTextInterface {
+  status: "positive" | "negative";
+}
+
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
@@ -37,6 +41,12 @@ export const InfoSelected = styled.p`
   margin-top: 5px;
 `;
 
+export const MonthlyIncomeStatusText = styled(
+  InfoSelected
+)<MonthlyIncomeStatusTextInterface>`
+  color: ${({ status }) => (status === "positive" ? "#219653" : "red")};
+`;
+
 export const GraphInfoSelect = styled.select`
   position: relative;
   appearance: none;
@@ -51,3 +61,5 @@ export const GraphInfoSelect = styled.select`
   margin-top: 5px;
   text-decoration: underline;
 `;
+
+export const SelectOption = styled.option``;

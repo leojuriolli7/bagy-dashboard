@@ -2,12 +2,15 @@ import { useEffect, useState } from "react";
 import {
   getAllProducts,
   getAllSales,
+  getAllStores,
+  getChartData,
   getHighlightedStore,
 } from "../../requests";
 import { AllSalesTable } from "../AllSalesTable";
 import { ProductsTable } from "../ProductsTable";
 import { ChartInfo } from "../ChartInfo";
 import * as S from "./styles";
+import { Chart } from "../Chart";
 
 interface HighlightedStoreInterface {
   id: number;
@@ -39,23 +42,50 @@ interface ProductsInterface {
   store: string;
 }
 
+interface DataInterface {
+  day: number;
+  june: number;
+  july: number;
+}
+
+interface ChartDataInterface {
+  storeId: number;
+  totalMonthIncome: string;
+  store: string;
+  data: DataInterface[];
+}
+
+interface UserStoresInterface {
+  id: number;
+  storeName: string;
+}
+
 export function Overview() {
   const [highlightedStore, setHighlightedStore] =
     useState<HighlightedStoreInterface>();
   const [allSales, setAllSales] = useState<AllSalesInterface>();
   const [products, setProducts] = useState<ProductsInterface[]>();
+  const [chartData, setChartData] = useState<ChartDataInterface>();
   const [loading, setLoading] = useState(true);
   const [type, setType] = useState("weekly");
+  const [userStores, setUserStores] = useState<UserStoresInterface[]>();
+  const [storeId, setStoreId] = useState(1);
 
   const fetchData = () => {
-    Promise.all([getHighlightedStore, getAllSales(type), getAllProducts]).then(
-      (response) => {
-        setHighlightedStore(response[0].data);
-        setAllSales(response[1].data[0]);
-        setProducts(response[2].data);
-        setLoading(false);
-      }
-    );
+    Promise.all([
+      getHighlightedStore,
+      getAllSales(type),
+      getAllProducts,
+      getChartData(storeId),
+      getAllStores,
+    ]).then((response) => {
+      setHighlightedStore(response[0].data);
+      setAllSales(response[1].data[0]);
+      setProducts(response[2].data);
+      setChartData(response[3].data[0]);
+      setUserStores(response[4].data);
+      setLoading(false);
+    });
   };
 
   useEffect(() => {
@@ -66,6 +96,10 @@ export function Overview() {
   useEffect(() => {
     getAllSales(type).then((response) => setAllSales(response.data[0]));
   }, [type]);
+
+  useEffect(() => {
+    getChartData(storeId).then((response) => setChartData(response.data[0]));
+  }, [storeId]);
 
   return (
     <S.Container>
@@ -96,8 +130,12 @@ export function Overview() {
             </S.Card>
           </S.CardContainer>
           <S.ChartContainer>
-            <div className="graphTemp"></div>
-            <ChartInfo />
+            <Chart chartData={chartData} />
+            <ChartInfo
+              userStores={userStores}
+              setStoreId={setStoreId}
+              chartData={chartData}
+            />
           </S.ChartContainer>
           <S.TablesContainer>
             <AllSalesTable allSales={allSales} setType={setType} />

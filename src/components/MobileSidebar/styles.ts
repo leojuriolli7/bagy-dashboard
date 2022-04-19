@@ -4,6 +4,10 @@ interface ShowInterface {
   show: boolean;
 }
 
+interface LinkInterface {
+  isSelected: boolean;
+}
+
 export const NavContainer = styled.div<ShowInterface>`
   transform: ${({ show }) => (show ? "translateX(0)" : "translateX(-100%)")};
   z-index: 10;
@@ -41,13 +45,14 @@ export const LinksList = styled.ul`
 
 export const ListItem = styled.li``;
 
-export const Link = styled.a`
+export const Link = styled.a<LinkInterface>`
   text-decoration: none;
-  color: var(--light-grey);
+  color: ${({ isSelected }) =>
+    isSelected ? "var(--pink)" : "var(--light-grey)"};
   transition: color 0.3s linear;
   font-size: 2rem;
 
   &:hover {
-    color: var(--pink);
+    color: var(--light-grey);
   }
 `;
