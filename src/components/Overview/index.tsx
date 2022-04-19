@@ -4,9 +4,9 @@ import {
   getAllSales,
   getHighlightedStore,
 } from "../../requests";
-import { api } from "../../services/api";
 import { AllSalesTable } from "../AllSalesTable";
 import { ProductsTable } from "../ProductsTable";
+import { ChartInfo } from "../ChartInfo";
 import * as S from "./styles";
 
 interface HighlightedStoreInterface {
@@ -95,6 +95,10 @@ export function Overview() {
               <S.CardText>{highlightedStore?.monthlyGoal}</S.CardText>
             </S.Card>
           </S.CardContainer>
+          <S.ChartContainer>
+            <div className="graphTemp"></div>
+            <ChartInfo />
+          </S.ChartContainer>
           <S.TablesContainer>
             <AllSalesTable allSales={allSales} setType={setType} />
             <ProductsTable products={products} />

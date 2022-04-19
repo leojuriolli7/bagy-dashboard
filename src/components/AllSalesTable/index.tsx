@@ -26,11 +26,13 @@ export function AllSalesTable({ allSales, setType }: any) {
           <S.SalesTableTitle>Total de compras</S.SalesTableTitle>
           <S.SalesTableSubTitle>{`Valor Geral: ${allSales.total_value}`}</S.SalesTableSubTitle>
         </S.SalesTableTitleContainer>
-        <S.SalesTableSelect onChange={(e) => handleChange(e)}>
-          <S.SelectOption value="weekly">Semanal</S.SelectOption>
-          <S.SelectOption value="monthly">Mensal</S.SelectOption>
-          <S.SelectOption value="annual">Anual</S.SelectOption>
-        </S.SalesTableSelect>
+        <S.SelectContainer>
+          <S.SalesTableSelect onChange={(e) => handleChange(e)}>
+            <S.SelectOption value="weekly">Semanal</S.SelectOption>
+            <S.SelectOption value="monthly">Mensal</S.SelectOption>
+            <S.SelectOption value="annual">Anual</S.SelectOption>
+          </S.SalesTableSelect>
+        </S.SelectContainer>
       </S.SalesTableHeadContainer>
       <S.SalesTable>
         {allSales?.data.map((sale: AllSalesDataInterface) => (

@@ -25,6 +25,14 @@ export const Container = styled.div`
     border-radius: 10px;
     background-color: #fc3c8d70;
   }
+
+  @media (max-width: 1180px) {
+    max-width: 1000px;
+  }
+
+  @media (max-width: 470px) {
+    padding-top: 26px;
+  }
 `;
 
 export const SalesTableHeadContainer = styled.div`
@@ -32,6 +40,10 @@ export const SalesTableHeadContainer = styled.div`
   justify-content: space-between;
   align-items: flex-start;
   padding: 0 8px 0 30px;
+
+  @media (max-width: 470px) {
+    padding: 0 8px 0 20px;
+  }
 `;
 
 export const SalesTableTitleContainer = styled.div``;
@@ -47,9 +59,43 @@ export const SalesTableSubTitle = styled.p`
   font-size: 1rem;
   font-weight: bold;
   margin-top: 6px;
+
+  @media (max-width: 470px) {
+    margin-top: 3px;
+  }
 `;
 
-export const SalesTableSelect = styled.select``;
+export const SelectContainer = styled.div`
+  display: flex;
+  cursor: pointer;
+  line-height: 1.1;
+  align-items: center;
+  padding-top: 5px;
+
+  ::after {
+    content: "";
+    width: 0.8em;
+    height: 0.5em;
+    background-color: var(--pink);
+    clip-path: polygon(100% 0%, 0 0%, 50% 100%);
+  }
+`;
+
+export const SalesTableSelect = styled.select`
+  text-decoration: underline;
+  color: var(--pink);
+  font-weight: 600;
+  width: 100%;
+  appearance: none;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  cursor: inherit;
+  line-height: inherit;
+`;
 
 export const SelectOption = styled.option``;
 
@@ -62,6 +108,10 @@ export const SalesTable = styled.table`
   margin-top: 24px;
   padding: 0 16px;
   border-collapse: collapse;
+
+  @media (max-width: 470px) {
+    margin-top: 5px;
+  }
 `;
 
 export const SalesTableRow = styled.tr`
@@ -80,6 +130,14 @@ export const SalesData = styled.td`
 
   &:nth-child(3) {
     text-align: end;
+  }
+
+  @media (max-width: 470px) {
+    padding: 30px 15px;
+  }
+
+  @media (max-width: 360px) {
+    padding: 30px 5px;
   }
 `;
 

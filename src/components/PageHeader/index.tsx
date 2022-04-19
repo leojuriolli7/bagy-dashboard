@@ -3,11 +3,15 @@ import searchIcon from "../../assets/search.svg";
 import notificationIcon from "../../assets/notification.svg";
 import profileImage from "../../assets/profileImage.jpg";
 import * as S from "./styles";
+import { HamburguerIcon } from "../HamburguerIcon";
 
-export function PageHeader({ title }: any) {
+export function PageHeader({ title, show, setShow }: any) {
   return (
     <S.Container>
-      <S.PageTitle>{title}</S.PageTitle>
+      <S.PageTitleAndHamburguerContainer>
+        <S.PageTitle>{title}</S.PageTitle>
+        <HamburguerIcon show={show} setShow={setShow} />
+      </S.PageTitleAndHamburguerContainer>
       <S.TopRightContainer>
         <S.SearchAndNotificationsContainer>
           <Icon src={searchIcon} />

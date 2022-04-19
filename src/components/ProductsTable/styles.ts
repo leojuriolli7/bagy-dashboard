@@ -25,6 +25,10 @@ export const Container = styled.div`
     border-radius: 10px;
     background-color: #fc3c8d70;
   }
+
+  @media (max-width: 1180px) {
+    max-width: 1000px;
+  }
 `;
 
 export const ProductsTable = styled.table`
@@ -49,6 +53,11 @@ export const TableHead = styled.th`
 
   &:nth-child(1) {
     padding-left: 30px;
+
+    @media (max-width: 457px) {
+      padding-left: 10px;
+      padding-right: 5px;
+    }
   }
 `;
 
@@ -60,6 +69,18 @@ export const ProductData = styled.td`
 
   &:nth-child(1) {
     padding-left: 30px;
+
+    @media (max-width: 457px) {
+      padding-left: 10px;
+    }
+  }
+
+  @media (max-width: 457px) {
+    padding: 25px 10px 25px 0;
+  }
+
+  @media (max-width: 360px) {
+    padding-right: 4px;
   }
 `;
 
@@ -70,6 +91,10 @@ export const ProductPrice = styled.span`
   color: white;
   padding: 5px 15px;
   border-radius: 9px;
+
+  @media (max-width: 457px) {
+    padding: 5px 7px;
+  }
 `;
 
 export const ProductDate = styled(ProductPrice)`

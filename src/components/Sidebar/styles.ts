@@ -10,6 +10,10 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   padding-top: 26px;
+
+  @media (max-width: 840px) {
+    display: none;
+  }
 `;
 
 export const LogoContainer = styled.div`

@@ -88,6 +88,22 @@ export const LoadingText = styled.p`
   font-size: 1.5rem;
 `;
 
+export const ChartContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  border: 1px solid var(--light-grey);
+  border-radius: 15px;
+  margin: 0 auto;
+  margin-top: 20px;
+  max-width: 1125px;
+
+  .graphTemp {
+    flex: 2;
+  }
+`;
+
 export const TablesContainer = styled.div`
   display: flex;
   justify-content: center;
