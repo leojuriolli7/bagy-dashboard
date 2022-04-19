@@ -30,6 +30,7 @@ export const StoreTotalText = styled.p`
   font-weight: 800;
   -webkit-text-stroke: 1px #000000;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  margin-top: 10px;
 `;
 
 export const Card = styled.div`
@@ -61,7 +62,7 @@ export const Card = styled.div`
 
 export const CardTitle = styled.h2`
   text-align: center;
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   font-weight: 700;
   color: var(--grey);
   transition: 0.2s;
@@ -71,7 +72,18 @@ export const CardText = styled.p`
   text-align: center;
   color: var(--black);
   transition: 0.2s;
-  font-size: 2.5rem;
+  font-size: 2.4rem;
   font-weight: 700;
-  margin-top: 20px;
+  margin-top: 16px;
+`;
+
+export const LoadingScreenContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--light-grey);
+`;
+export const LoadingText = styled.p`
+  color: var(--black);
+  font-size: 1.5rem;
 `;

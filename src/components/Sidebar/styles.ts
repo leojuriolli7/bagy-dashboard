@@ -24,10 +24,14 @@ export const Logo = styled.img``;
 
 export const Navigation = styled.nav`
   width: 100%;
+  margin-top: 18px;
 `;
 
 export const MenuList = styled.ul`
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 `;
 
 export const ListItem = styled.li<ListItemProps>`
@@ -36,8 +40,7 @@ export const ListItem = styled.li<ListItemProps>`
   background-color: ${(props) => props.isSelected && "#463746"};
   border: ${(props) => props.isSelected && "1px solid white"};
   border-left: ${(props) => props.isSelected && "3px solid #FC3C8D"};
-  padding: ${(props) => (props.isSelected ? "13px 24px" : "14px 27px")};
-  margin-top: 15px;
+  padding: ${(props) => (props.isSelected ? "17px 24px" : "18px 27px")};
 
   &:hover {
     cursor: pointer;

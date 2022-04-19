@@ -58,5 +58,4 @@ export const ProfileImage = styled.img`
   border-radius: 50%;
   outline: 2px solid var(--light-grey);
   outline-offset: 2px;
-  transition: 0.3s;
 `;

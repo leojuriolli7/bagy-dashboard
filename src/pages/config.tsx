@@ -1,5 +1,5 @@
 import { PageWrapper } from "../components/PageWrapper";
 
 export function ConfigPage() {
-  return <PageWrapper children={<p>Config</p>} />;
+  return <PageWrapper title="Configurações" />;
 }
