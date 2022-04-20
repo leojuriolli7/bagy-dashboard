@@ -15,7 +15,7 @@ de componentes, exceto pelos componentes dos gráficos) de visualização de dad
 Clone the project:
 
 ```bash
-git@github.com:leojuriolli7/bagy-dashboard.git
+git clone git@github.com:leojuriolli7/bagy-dashboard.git
 ```
 
 Go to the project directory:
