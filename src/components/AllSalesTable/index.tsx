@@ -39,7 +39,6 @@ export function AllSalesTable({ allSales, setType }: AllSalesTableProps) {
             </S.SalesTableRow>
           ))}
         </S.SalesTableBody>
-        <tfoot></tfoot>
       </S.SalesTable>
     </S.Container>
   );

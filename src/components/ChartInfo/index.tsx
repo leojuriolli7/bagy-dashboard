@@ -45,6 +45,8 @@ export function ChartInfo({
     0
   );
 
+  const SubtractMonths = sumCurrentMonth - sumLastMonth;
+
   return (
     <S.Container>
       <S.ItemContainer>
@@ -68,21 +70,26 @@ export function ChartInfo({
       <S.ItemContainer>
         <S.InfoTitle>Total de faturamento</S.InfoTitle>
         <S.InfoSelected>
-          {chartData?.data
-            ? `R$${sumCurrentMonth - sumLastMonth}.000,00`
-            : "Indisponivel"}
+          {chartData?.data ? `R$${sumCurrentMonth}.000,00` : "Indisponivel"}
         </S.InfoSelected>
       </S.ItemContainer>
       <S.ItemContainer>
         <S.InfoTitle>Análise comparativa</S.InfoTitle>
         {chartData?.data ? (
-          <S.MonthlyIncomeStatusText
-            status={
-              sumCurrentMonth - sumLastMonth > 0 ? "positive" : "negative"
-            }
-          >
-            {sumCurrentMonth - sumLastMonth > 0 ? "Positivo" : "Negativo"}
-          </S.MonthlyIncomeStatusText>
+          <>
+            <S.MonthlyIncomeStatusText
+              status={SubtractMonths > 0 ? "positive" : "negative"}
+            >
+              {SubtractMonths > 0 ? "Positivo" : "Negativo"}
+            </S.MonthlyIncomeStatusText>
+            <S.MonthlyIncomeComparison
+              status={SubtractMonths > 0 ? "positive" : "negative"}
+            >
+              {`${SubtractMonths > 0 ? "+" : "-"}R$${Math.abs(
+                SubtractMonths
+              )}.000,00`}
+            </S.MonthlyIncomeComparison>
+          </>
         ) : (
           <S.InfoSelected>Indisponível</S.InfoSelected>
         )}

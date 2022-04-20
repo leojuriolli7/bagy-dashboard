@@ -15,6 +15,7 @@ export const Container = styled.div`
     flex-direction: row;
     border: 1px solid var(--light-grey);
     border-radius: 20px;
+    width: 98%;
   }
 `;
 
@@ -35,8 +36,6 @@ export const ItemContainer = styled.div`
 
   @media (max-width: 1350px) {
     height: 140px;
-    padding-left: 10px;
-    padding-right: 10px;
   }
 `;
 
@@ -57,6 +56,11 @@ export const MonthlyIncomeStatusText = styled(
   InfoSelected
 )<MonthlyIncomeStatusTextInterface>`
   color: ${({ status }) => (status === "positive" ? "#219653" : "red")};
+`;
+
+export const MonthlyIncomeComparison = styled(MonthlyIncomeStatusText)`
+  font-size: 1rem;
+  color: ${({ status }) => (status === "positive" ? "#21965380" : "#f9000090")};
 `;
 
 export const InfoSelectedUnderline = styled(InfoSelected)`

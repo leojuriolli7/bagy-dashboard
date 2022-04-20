@@ -10,7 +10,9 @@
     { "id": 1, "storeName": "Estilo Pri" },
     { "id": 2, "storeName": "Vilma Calçados" },
     { "id": 3, "storeName": "Mary Lingerie" },
-    { "id": 4, "storeName": "Loja Belíssima" }
+    { "id": 4, "storeName": "Loja Belíssima" },
+    { "id": 5, "storeName": "João Eletrônicos" },
+    { "id": 6, "storeName": "Gráfica Freitas" }
   ],
   "chartInfo": [
     {
@@ -404,6 +406,202 @@
           "july": 35
         }
       ]
+    },
+    {
+      "storeId": 5,
+      "store": "João Eletrônicos",
+      "totalMonthIncome": "93.230,00",
+      "lastMonthIncome": "77.353,00",
+      "data": [
+        {
+          "day": 1,
+          "june": 13,
+          "july": 33
+        },
+        {
+          "day": 2,
+          "june": 14,
+          "july": 34
+        },
+        {
+          "day": 3,
+          "june": 17,
+          "july": 37
+        },
+        {
+          "day": 4,
+          "june": 35,
+          "july": 29
+        },
+        {
+          "day": 5,
+          "june": 37,
+          "july": 25
+        },
+        {
+          "day": 6,
+          "june": 30,
+          "july": 39
+        },
+        {
+          "day": 7,
+          "june": 34,
+          "july": 40
+        },
+        {
+          "day": 8,
+          "june": 39,
+          "july": 49
+        },
+        {
+          "day": 9,
+          "june": 44,
+          "july": 53
+        },
+        {
+          "day": 10,
+          "june": 34,
+          "july": 57
+        },
+        {
+          "day": 11,
+          "june": 45,
+          "july": 22
+        },
+        {
+          "day": 12,
+          "june": 40,
+          "july": 39
+        },
+        {
+          "day": 13,
+          "june": 29,
+          "july": 19
+        },
+        {
+          "day": 14,
+          "june": 17,
+          "july": 23
+        },
+        {
+          "day": 15,
+          "june": 26,
+          "july": 35
+        },
+        {
+          "day": 16,
+          "june": 31,
+          "july": 42
+        },
+        {
+          "day": 17,
+          "june": 34,
+          "july": 44
+        },
+        {
+          "day": 18,
+          "june": 30,
+          "july": 40
+        }
+      ]
+    },
+    {
+      "storeId": 6,
+      "store": "Gráfica Freitas",
+      "totalMonthIncome": "54.384,65",
+      "lastMonthIncome": "72.456,00",
+      "data": [
+        {
+          "day": 1,
+          "june": 6,
+          "july": 14
+        },
+        {
+          "day": 2,
+          "june": 24,
+          "july": 22
+        },
+        {
+          "day": 3,
+          "june": 25,
+          "july": 23
+        },
+        {
+          "day": 4,
+          "june": 30,
+          "july": 29
+        },
+        {
+          "day": 5,
+          "june": 37,
+          "july": 31
+        },
+        {
+          "day": 6,
+          "june": 33,
+          "july": 32
+        },
+        {
+          "day": 7,
+          "june": 40,
+          "july": 32
+        },
+        {
+          "day": 8,
+          "june": 39,
+          "july": 40
+        },
+        {
+          "day": 9,
+          "june": 38,
+          "july": 44
+        },
+        {
+          "day": 10,
+          "june": 40,
+          "july": 42
+        },
+        {
+          "day": 11,
+          "june": 32,
+          "july": 38
+        },
+        {
+          "day": 12,
+          "june": 39,
+          "july": 26
+        },
+        {
+          "day": 13,
+          "june": 26,
+          "july": 19
+        },
+        {
+          "day": 14,
+          "june": 17,
+          "july": 21
+        },
+        {
+          "day": 15,
+          "june": 24,
+          "july": 14
+        },
+        {
+          "day": 16,
+          "june": 35,
+          "july": 23
+        },
+        {
+          "day": 17,
+          "june": 30,
+          "july": 29
+        },
+        {
+          "day": 18,
+          "june": 30,
+          "july": 36
+        }
+      ]
     }
   ],
   "all-sales": [
@@ -435,6 +633,18 @@
           "store": "Loja Belíssima",
           "totalSales": "89",
           "income": "281,00"
+        },
+        {
+          "id": 5,
+          "store": "João Eletrônicos",
+          "totalSales": "234",
+          "income": "1681,00"
+        },
+        {
+          "id": 6,
+          "store": "Gráfica Freitas",
+          "totalSales": "359",
+          "income": "1437,65"
         }
       ]
     },
@@ -466,6 +676,18 @@
           "store": "Loja Belíssima",
           "totalSales": "367",
           "income": "1085,00"
+        },
+        {
+          "id": 5,
+          "store": "João Eletrônicos",
+          "totalSales": "983",
+          "income": "10681,00"
+        },
+        {
+          "id": 6,
+          "store": "Gráfica Freitas",
+          "totalSales": "1423",
+          "income": "5794,25"
         }
       ]
     },
@@ -497,6 +719,18 @@
           "store": "Loja Belíssima",
           "totalSales": "367",
           "income": "19.541,00"
+        },
+        {
+          "id": 5,
+          "store": "João Eletrônicos",
+          "totalSales": "11594",
+          "income": "200.681,00"
+        },
+        {
+          "id": 6,
+          "store": "Gráfica Freitas",
+          "totalSales": "1423",
+          "income": "72.340,75"
         }
       ]
     }
@@ -641,6 +875,27 @@
       "store": "Mary Lingerie",
       "price": "29,90",
       "date": "03/07/20"
+    },
+    {
+      "id": 21,
+      "productName": "Notebook #16",
+      "store": "João Eletrônicos",
+      "price": "499,90",
+      "date": "02/07/20"
+    },
+    {
+      "id": 22,
+      "productName": "Smarthpone #16",
+      "store": "João Eletrônicos",
+      "price": "1999,90",
+      "date": "02/07/20"
+    },
+    {
+      "id": 23,
+      "productName": "Caderno #23",
+      "store": "Gráfica Freitas",
+      "price": "39,90",
+      "date": "02/07/20"
     }
   ]
 }
