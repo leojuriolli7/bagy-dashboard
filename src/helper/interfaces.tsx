@@ -1,11 +1,3 @@
-interface HighlightedStoreInterface {
-  id: number;
-  monthlyGoal: string;
-  store: string;
-  totalIncome: string;
-  totalStores: string;
-}
-
 interface AllSalesDataInterface {
   id: number;
   store: string;
@@ -40,6 +32,9 @@ interface ChartDataInterface {
   lastMonthIncome: string;
   store: string;
   data: DataInterface[];
+  totalIncome: string;
+  monthlyGoal: string;
+  totalStores: string;
 }
 
 interface UserStoresInterface {
@@ -52,7 +47,6 @@ interface ShowInterface {
 }
 
 export type {
-  HighlightedStoreInterface,
   AllSalesDataInterface,
   AllSalesInterface,
   ProductsInterface,

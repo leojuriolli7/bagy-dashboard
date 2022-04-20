@@ -1,11 +1,4 @@
 {
-  "highlighted-store": {
-    "id": 1,
-    "store": "Estilo Pri",
-    "totalStores": "7213",
-    "monthlyGoal": "110.000,00",
-    "totalIncome": "100.000,00"
-  },
   "stores": [
     { "id": 1, "storeName": "Estilo Pri" },
     { "id": 2, "storeName": "Vilma Calçados" },
@@ -20,6 +13,9 @@
       "store": "Estilo Pri",
       "totalMonthIncome": "45.000,00",
       "lastMonthIncome": "39.750,00",
+      "totalIncome": "84.750,00",
+      "monthlyGoal": "110.000,00",
+      "totalStores": "1242",
       "data": [
         {
           "day": 1,
@@ -118,6 +114,9 @@
       "store": "Vilma Calçados",
       "totalMonthIncome": "93.500,00",
       "lastMonthIncome": "105.350,00",
+      "totalIncome": "198.850,00",
+      "monthlyGoal": "100.000,00",
+      "totalStores": "1642",
       "data": [
         {
           "day": 1,
@@ -216,6 +215,9 @@
       "store": "Mary Lingerie",
       "totalMonthIncome": "73.500,00",
       "lastMonthIncome": "65.350,00",
+      "totalIncome": "138.850,00",
+      "monthlyGoal": "60.000,00",
+      "totalStores": "536",
       "data": [
         {
           "day": 1,
@@ -314,6 +316,9 @@
       "store": "Loja Belíssima",
       "totalMonthIncome": "53.500,00",
       "lastMonthIncome": "47.350,00",
+      "totalIncome": "100.850,00",
+      "monthlyGoal": "50.000,00",
+      "totalStores": "427",
       "data": [
         {
           "day": 1,
@@ -412,6 +417,9 @@
       "store": "João Eletrônicos",
       "totalMonthIncome": "93.230,00",
       "lastMonthIncome": "77.353,00",
+      "totalIncome": "170.583,00",
+      "monthlyGoal": "75.000,00",
+      "totalStores": "348",
       "data": [
         {
           "day": 1,
@@ -510,6 +518,9 @@
       "store": "Gráfica Freitas",
       "totalMonthIncome": "54.384,65",
       "lastMonthIncome": "72.456,00",
+      "totalIncome": "126.840,00",
+      "monthlyGoal": "70.000,00",
+      "totalStores": "215",
       "data": [
         {
           "day": 1,

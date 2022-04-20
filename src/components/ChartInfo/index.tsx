@@ -49,6 +49,7 @@ export function ChartInfo({
         <S.ChartInfoSelect
           onChange={(e) => handleChange(e)}
           style={{ width: selectWidth }}
+          data-cy="select-stores"
         >
           {userStores.map((store: UserStoresInterface) => (
             <S.SelectOption value={store.id} key={store.id}>

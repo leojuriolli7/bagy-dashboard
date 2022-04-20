@@ -15,7 +15,7 @@ export function PageHeader({ title, show, setShow }: PageHeaderInterface) {
   return (
     <S.Container>
       <S.PageTitleAndHamburguerContainer>
-        <S.PageTitle>{title}</S.PageTitle>
+        <S.PageTitle data-cy="page-title">{title}</S.PageTitle>
         <HamburguerIcon show={show} setShow={setShow} />
       </S.PageTitleAndHamburguerContainer>
       <S.TopRightContainer>

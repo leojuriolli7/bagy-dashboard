@@ -4,7 +4,6 @@ import {
   getAllSales,
   getAllStores,
   getChartData,
-  getHighlightedStore,
 } from "../../requests";
 import { AllSalesTable } from "../AllSalesTable";
 import { ProductsTable } from "../ProductsTable";
@@ -13,7 +12,6 @@ import * as S from "./styles";
 import { Chart } from "../Chart";
 import "animate.css";
 import {
-  HighlightedStoreInterface,
   AllSalesInterface,
   ProductsInterface,
   ChartDataInterface,
@@ -21,8 +19,6 @@ import {
 } from "../../helper/interfaces";
 
 export function Overview() {
-  const [highlightedStore, setHighlightedStore] =
-    useState<HighlightedStoreInterface>();
   const [allSales, setAllSales] = useState<AllSalesInterface>();
   const [products, setProducts] = useState<ProductsInterface[]>();
   const [chartData, setChartData] = useState<ChartDataInterface>();
@@ -33,17 +29,15 @@ export function Overview() {
 
   const fetchData = () => {
     Promise.all([
-      getHighlightedStore,
       getAllSales(type),
       getAllProducts,
       getChartData(storeId),
       getAllStores,
     ]).then((response) => {
-      setHighlightedStore(response[0].data);
-      setAllSales(response[1].data[0]);
-      setProducts(response[2].data);
-      setChartData(response[3].data[0]);
-      setUserStores(response[4].data);
+      setAllSales(response[0].data[0]);
+      setProducts(response[1].data);
+      setChartData(response[2].data[0]);
+      setUserStores(response[3].data);
       setLoading(false);
     });
   };
@@ -72,21 +66,19 @@ export function Overview() {
           <S.CardContainer>
             <S.StoreTotal>
               <S.CardTitle>Total de Lojas</S.CardTitle>
-              <S.StoreTotalText>
-                {highlightedStore?.totalStores}
-              </S.StoreTotalText>
+              <S.StoreTotalText>{chartData?.totalStores}</S.StoreTotalText>
             </S.StoreTotal>
             <S.Card>
               <S.CardTitle>Faturamento Total</S.CardTitle>
-              <S.CardText>{highlightedStore?.totalIncome}</S.CardText>
+              <S.CardText>{chartData?.totalIncome}</S.CardText>
             </S.Card>
             <S.Card>
               <S.CardTitle>Loja Destaque</S.CardTitle>
-              <S.CardText>{highlightedStore?.store}</S.CardText>
+              <S.CardText>{chartData?.store}</S.CardText>
             </S.Card>
             <S.Card>
               <S.CardTitle>Meta Mensal</S.CardTitle>
-              <S.CardText>{highlightedStore?.monthlyGoal}</S.CardText>
+              <S.CardText>{chartData?.monthlyGoal}</S.CardText>
             </S.Card>
           </S.CardContainer>
           <S.ChartContainer>

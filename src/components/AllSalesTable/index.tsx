@@ -22,7 +22,10 @@ export function AllSalesTable({ allSales, setType }: AllSalesTableProps) {
           <S.SalesTableSubTitle>{`Valor Geral: ${allSales.total_value}`}</S.SalesTableSubTitle>
         </S.SalesTableTitleContainer>
         <S.SelectContainer>
-          <S.SalesTableSelect onChange={(e) => handleChange(e)}>
+          <S.SalesTableSelect
+            data-cy="select-sales-period"
+            onChange={(e) => handleChange(e)}
+          >
             <S.SelectOption value="weekly">Semanal</S.SelectOption>
             <S.SelectOption value="monthly">Mensal</S.SelectOption>
             <S.SelectOption value="annual">Anual</S.SelectOption>
