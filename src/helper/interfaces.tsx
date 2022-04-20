@@ -28,8 +28,6 @@ interface DataInterface {
 
 interface ChartDataInterface {
   storeId: number;
-  totalMonthIncome: string;
-  lastMonthIncome: string;
   store: string;
   data: DataInterface[];
   totalIncome: string;

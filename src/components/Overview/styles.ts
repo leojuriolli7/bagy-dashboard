@@ -95,6 +95,10 @@ export const CardText = styled.p`
   font-size: 2.4rem;
   font-weight: 700;
   margin-top: 16px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
 
   @media (min-width: 1600px) {
     font-size: 2rem;
