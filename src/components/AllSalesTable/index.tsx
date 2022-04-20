@@ -1,20 +1,15 @@
+import {
+  AllSalesDataInterface,
+  AllSalesInterface,
+} from "../../helper/interfaces";
 import * as S from "./styles";
 
-interface AllSalesDataInterface {
-  id: number;
-  store: string;
-  totalSales: string;
-  income: string;
+interface AllSalesTableProps {
+  allSales: AllSalesInterface;
+  setType: any;
 }
 
-interface AllSalesInterface {
-  id: number;
-  type: "weekly" | "annual" | "monthly";
-  total_value: string;
-  data: AllSalesDataInterface[];
-}
-
-export function AllSalesTable({ allSales, setType }: any) {
+export function AllSalesTable({ allSales, setType }: AllSalesTableProps) {
   const handleChange = (e: any) => {
     setType(e.target.value);
   };

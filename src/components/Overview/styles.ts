@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
-export const Container = styled.div`
+export const Container = styled.div.attrs({
+  className: "animate__animated animate__fadeIn",
+})`
   margin-top: 40px;
 `;
 
@@ -10,6 +12,10 @@ export const CardContainer = styled.div`
   align-items: center;
   justify-content: center;
   gap: 30px;
+
+  @media (min-width: 1600px) {
+    gap: 15px;
+  }
 `;
 
 export const StoreTotal = styled.div`
@@ -31,6 +37,10 @@ export const StoreTotalText = styled.p`
   -webkit-text-stroke: 1px #000000;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   margin-top: 10px;
+
+  @media (min-width: 1600px) {
+    font-size: 2.6rem;
+  }
 `;
 
 export const Card = styled.div`
@@ -45,6 +55,12 @@ export const Card = styled.div`
   min-width: 250px;
   max-width: 260px;
   padding: 22px;
+
+  @media (min-width: 1600px) {
+    min-width: 200px;
+    max-width: 255px;
+    padding: 25px 0;
+  }
 
   &:hover {
     cursor: pointer;
@@ -66,6 +82,10 @@ export const CardTitle = styled.h2`
   font-weight: 700;
   color: var(--grey);
   transition: 0.2s;
+
+  @media (min-width: 1600px) {
+    font-size: 1.1rem;
+  }
 `;
 
 export const CardText = styled.p`
@@ -75,9 +95,15 @@ export const CardText = styled.p`
   font-size: 2.4rem;
   font-weight: 700;
   margin-top: 16px;
+
+  @media (min-width: 1600px) {
+    font-size: 2rem;
+  }
 `;
 
-export const LoadingScreenContainer = styled.div`
+export const LoadingScreenContainer = styled.div.attrs({
+  className: "animate__animated animate__fadeIn",
+})`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -99,8 +125,8 @@ export const ChartContainer = styled.div`
   margin-top: 20px;
   max-width: 1125px;
 
-  .graphTemp {
-    flex: 2;
+  @media (min-width: 1600px) {
+    max-width: 1070px;
   }
 
   @media (max-width: 1350px) {
@@ -119,6 +145,10 @@ export const TablesContainer = styled.div`
   align-items: center;
   margin-top: 24px;
   gap: 30px;
+
+  @media (min-width: 1600px) {
+    gap: 15px;
+  }
 
   @media (max-width: 1180px) {
     flex-direction: column;

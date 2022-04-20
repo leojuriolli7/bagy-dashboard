@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
-export const Container = styled.div`
+export const Container = styled.div.attrs({
+  className: "animate__animated animate__fadeIn",
+})`
   display: flex;
   align-items: center;
   justify-content: space-between;

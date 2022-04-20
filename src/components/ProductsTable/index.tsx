@@ -1,14 +1,11 @@
+import { ProductsInterface } from "../../helper/interfaces";
 import * as S from "./styles";
 
-interface ProductsInterface {
-  date: string;
-  id: number;
-  price: string;
-  productName: string;
-  store: string;
+interface ProductsTableProps {
+  products: ProductsInterface[];
 }
 
-export function ProductsTable({ products }: any) {
+export function ProductsTable({ products }: ProductsTableProps) {
   return (
     <S.Container>
       <S.ProductsTable>

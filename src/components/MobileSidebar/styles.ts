@@ -1,8 +1,5 @@
 import styled from "styled-components";
-
-interface ShowInterface {
-  show: boolean;
-}
+import { ShowInterface } from "../../helper/interfaces";
 
 interface LinkInterface {
   isSelected: boolean;

@@ -22,12 +22,12 @@
         {
           "day": 1,
           "june": 32,
-          "july": 15
+          "july": 18
         },
         {
           "day": 2,
-          "june": 34,
-          "july": 32
+          "june": 35,
+          "july": 27
         },
         {
           "day": 3,
@@ -41,73 +41,73 @@
         },
         {
           "day": 5,
-          "june": 22,
+          "june": 30,
           "july": 42
         },
         {
           "day": 6,
-          "june": 25,
-          "july": 44
+          "june": 36,
+          "july": 55
         },
         {
           "day": 7,
-          "june": 27,
+          "june": 40,
           "july": 42
         },
         {
           "day": 8,
-          "june": 30,
+          "june": 36,
           "july": 28
         },
         {
           "day": 9,
-          "june": 32,
+          "june": 30,
           "july": 25
         },
         {
           "day": 10,
-          "june": 31,
+          "june": 26,
           "july": 30
         },
         {
           "day": 11,
-          "june": 30,
+          "june": 22,
           "july": 38
         },
         {
           "day": 12,
-          "june": 26,
+          "june": 18,
           "july": 48
         },
         {
           "day": 13,
-          "june": 23,
-          "july": 50
+          "june": 28,
+          "july": 52
         },
         {
           "day": 14,
-          "june": 18,
+          "june": 46,
           "july": 52
         },
         {
           "day": 15,
-          "june": 24,
-          "july": 42
+          "june": 25,
+          "july": 48
         },
         {
           "day": 16,
-          "june": 28,
-          "july": 42
+          "june": 26,
+          "july": 40
         },
         {
           "day": 17,
-          "june": 40,
+          "june": 29,
           "july": 35
         },
         {
           "day": 18,
-          "june": 34,
-          "july": 30
+          "june": 32,
+          "july": 34
         }
       ]
     },
@@ -135,7 +135,7 @@
         {
           "day": 4,
           "june": 45,
-          "july": 14
+          "july": 23
         },
         {
           "day": 5,
@@ -170,12 +170,12 @@
         {
           "day": 11,
           "june": 24,
-          "july": 9
+          "july": 23
         },
         {
           "day": 12,
           "june": 23,
-          "july": 14
+          "july": 21
         },
         {
           "day": 13,
@@ -205,7 +205,203 @@
         {
           "day": 18,
           "june": 37,
+          "july": 32
+        }
+      ]
+    },
+    {
+      "storeId": 3,
+      "store": "Mary Lingerie",
+      "totalMonthIncome": "73.500,00",
+      "lastMonthIncome": "65.350,00",
+      "data": [
+        {
+          "day": 1,
+          "june": 23,
           "july": 12
+        },
+        {
+          "day": 2,
+          "june": 27,
+          "july": 23
+        },
+        {
+          "day": 3,
+          "june": 38,
+          "july": 25
+        },
+        {
+          "day": 4,
+          "june": 45,
+          "july": 29
+        },
+        {
+          "day": 5,
+          "june": 47,
+          "july": 31
+        },
+        {
+          "day": 6,
+          "june": 48,
+          "july": 26
+        },
+        {
+          "day": 7,
+          "june": 51,
+          "july": 21
+        },
+        {
+          "day": 8,
+          "june": 43,
+          "july": 27
+        },
+        {
+          "day": 9,
+          "june": 44,
+          "july": 56
+        },
+        {
+          "day": 10,
+          "june": 45,
+          "july": 30
+        },
+        {
+          "day": 11,
+          "june": 27,
+          "july": 24
+        },
+        {
+          "day": 12,
+          "june": 23,
+          "july": 14
+        },
+        {
+          "day": 13,
+          "june": 31,
+          "july": 39
+        },
+        {
+          "day": 14,
+          "june": 21,
+          "july": 36
+        },
+        {
+          "day": 15,
+          "june": 21,
+          "july": 25
+        },
+        {
+          "day": 16,
+          "june": 28,
+          "july": 30
+        },
+        {
+          "day": 17,
+          "june": 45,
+          "july": 35
+        },
+        {
+          "day": 18,
+          "june": 37,
+          "july": 32
+        }
+      ]
+    },
+    {
+      "storeId": 4,
+      "store": "Loja Belíssima",
+      "totalMonthIncome": "53.500,00",
+      "lastMonthIncome": "47.350,00",
+      "data": [
+        {
+          "day": 1,
+          "june": 9,
+          "july": 23
+        },
+        {
+          "day": 2,
+          "june": 14,
+          "july": 26
+        },
+        {
+          "day": 3,
+          "june": 17,
+          "july": 25
+        },
+        {
+          "day": 4,
+          "june": 23,
+          "july": 29
+        },
+        {
+          "day": 5,
+          "june": 16,
+          "july": 34
+        },
+        {
+          "day": 6,
+          "june": 30,
+          "july": 26
+        },
+        {
+          "day": 7,
+          "june": 34,
+          "july": 40
+        },
+        {
+          "day": 8,
+          "june": 43,
+          "july": 49
+        },
+        {
+          "day": 9,
+          "june": 34,
+          "july": 53
+        },
+        {
+          "day": 10,
+          "june": 23,
+          "july": 55
+        },
+        {
+          "day": 11,
+          "june": 27,
+          "july": 44
+        },
+        {
+          "day": 12,
+          "june": 23,
+          "july": 39
+        },
+        {
+          "day": 13,
+          "june": 29,
+          "july": 44
+        },
+        {
+          "day": 14,
+          "june": 21,
+          "july": 58
+        },
+        {
+          "day": 15,
+          "june": 19,
+          "july": 55
+        },
+        {
+          "day": 16,
+          "june": 31,
+          "july": 42
+        },
+        {
+          "day": 17,
+          "june": 35,
+          "july": 32
+        },
+        {
+          "day": 18,
+          "june": 27,
+          "july": 35
         }
       ]
     }
@@ -333,6 +529,118 @@
       "store": "Loja Belíssima",
       "price": "19,90",
       "date": "17/07/20"
+    },
+    {
+      "id": 5,
+      "productName": "Anel #24",
+      "store": "Estilo Pri",
+      "price": "59,90",
+      "date": "16/07/20"
+    },
+    {
+      "id": 6,
+      "productName": "Salto Alto #16",
+      "store": "Vilma Calçados",
+      "price": "79,90",
+      "date": "15/07/20"
+    },
+    {
+      "id": 7,
+      "productName": "Conjunto #31",
+      "store": "Mary Lingerie",
+      "price": "99,90",
+      "date": "14/07/20"
+    },
+    {
+      "id": 8,
+      "productName": "Colar #98",
+      "store": "Estilo Pri",
+      "price": "59,90",
+      "date": "13/07/20"
+    },
+    {
+      "id": 9,
+      "productName": "Vestido #41",
+      "store": "Loja Belíssima",
+      "price": "45,90",
+      "date": "13/07/20"
+    },
+    {
+      "id": 10,
+      "productName": "Macaquinho #11",
+      "store": "Loja Belíssima",
+      "price": "69,90",
+      "date": "12/07/20"
+    },
+    {
+      "id": 11,
+      "productName": "Tiara #28",
+      "store": "Estilo Pri",
+      "price": "34,90",
+      "date": "11/07/20"
+    },
+    {
+      "id": 12,
+      "productName": "Saia #36",
+      "store": "Loja Belíssima",
+      "price": "44,90",
+      "date": "10/07/20"
+    },
+    {
+      "id": 13,
+      "productName": "Sapatilha #012",
+      "store": "Vilma Calçados",
+      "price": "37,90",
+      "date": "10/07/20"
+    },
+    {
+      "id": 14,
+      "productName": "Bracelete #46",
+      "store": "Estilo Pri",
+      "price": "19,90",
+      "date": "09/07/20"
+    },
+    {
+      "id": 15,
+      "productName": "Relógio #46",
+      "store": "Estilo Pri",
+      "price": "79,90",
+      "date": "08/07/20"
+    },
+    {
+      "id": 16,
+      "productName": "Meias #04",
+      "store": "Loja Belíssima",
+      "price": "09,90",
+      "date": "07/07/20"
+    },
+    {
+      "id": 17,
+      "productName": "Pingente #02",
+      "store": "Estilo Pri",
+      "price": "99,90",
+      "date": "06/07/20"
+    },
+    {
+      "id": 18,
+      "productName": "Tênis #56",
+      "store": "Vilma Calçados",
+      "price": "39,90",
+      "date": "05/07/20"
+    },
+    {
+      "id": 19,
+      "productName": "Top #02",
+      "store": "Loja Belíssima",
+      "price": "49,90",
+      "date": "04/07/20"
+    },
+    {
+      "id": 20,
+      "productName": "Pijama #21",
+      "store": "Mary Lingerie",
+      "price": "29,90",
+      "date": "03/07/20"
     }
   ]
 }

@@ -1,14 +1,26 @@
+import { useState } from "react";
+import {
+  ChartDataInterface,
+  UserStoresInterface,
+} from "../../helper/interfaces";
 import * as S from "./styles";
 
-interface UserStoresInterface {
-  id: number;
-  storeName: string;
+interface ChartInfoProps {
+  userStores: UserStoresInterface[];
+  setStoreId: any;
+  chartData: ChartDataInterface;
 }
 
-export function ChartInfo({ userStores, setStoreId, chartData }: any) {
+export function ChartInfo({
+  userStores,
+  setStoreId,
+  chartData,
+}: ChartInfoProps) {
   const handleChange = (e: any) => {
     setStoreId(e.target.value);
   };
+
+  const [currentMonthSum, setCurrentMonthSum] = useState(0);
 
   const statusCalculation =
     Number(

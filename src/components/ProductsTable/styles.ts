@@ -11,6 +11,10 @@ export const Container = styled.div`
   border-radius: 10px;
   padding: 30px 0 0 0;
 
+  @media (min-width: 1600px) {
+    max-width: 525px;
+  }
+
   &::-webkit-scrollbar-track {
     background-color: #c4c4c450;
     border-radius: 15px;

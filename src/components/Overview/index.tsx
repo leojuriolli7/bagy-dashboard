@@ -11,54 +11,14 @@ import { ProductsTable } from "../ProductsTable";
 import { ChartInfo } from "../ChartInfo";
 import * as S from "./styles";
 import { Chart } from "../Chart";
-
-interface HighlightedStoreInterface {
-  id: number;
-  monthlyGoal: string;
-  store: string;
-  totalIncome: string;
-  totalStores: string;
-}
-
-interface AllSalesDataInterface {
-  id: number;
-  store: string;
-  totalSales: string;
-  income: string;
-}
-
-interface AllSalesInterface {
-  id: number;
-  type: "weekly" | "annual" | "monthly";
-  total_value: string;
-  data: AllSalesDataInterface[];
-}
-
-interface ProductsInterface {
-  date: string;
-  id: number;
-  price: string;
-  productName: string;
-  store: string;
-}
-
-interface DataInterface {
-  day: number;
-  june: number;
-  july: number;
-}
-
-interface ChartDataInterface {
-  storeId: number;
-  totalMonthIncome: string;
-  store: string;
-  data: DataInterface[];
-}
-
-interface UserStoresInterface {
-  id: number;
-  storeName: string;
-}
+import "animate.css";
+import {
+  HighlightedStoreInterface,
+  AllSalesInterface,
+  ProductsInterface,
+  ChartDataInterface,
+  UserStoresInterface,
+} from "../../helper/interfaces";
 
 export function Overview() {
   const [highlightedStore, setHighlightedStore] =
@@ -130,16 +90,16 @@ export function Overview() {
             </S.Card>
           </S.CardContainer>
           <S.ChartContainer>
-            <Chart chartData={chartData} />
+            <Chart chartData={chartData!} />
             <ChartInfo
-              userStores={userStores}
-              setStoreId={setStoreId}
-              chartData={chartData}
+              userStores={userStores!}
+              setStoreId={setStoreId!}
+              chartData={chartData!}
             />
           </S.ChartContainer>
           <S.TablesContainer>
-            <AllSalesTable allSales={allSales} setType={setType} />
-            <ProductsTable products={products} />
+            <AllSalesTable allSales={allSales!} setType={setType} />
+            <ProductsTable products={products!} />
           </S.TablesContainer>
         </>
       )}

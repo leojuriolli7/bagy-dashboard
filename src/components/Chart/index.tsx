@@ -1,21 +1,13 @@
 import * as S from "./styles";
 import { AreaChart, YAxis, CartesianGrid, Area, Tooltip } from "recharts";
 import { CustomTooltip } from "../CustomChartTooltip";
+import { ChartDataInterface } from "../../helper/interfaces";
 
-interface DataInterface {
-  day: number;
-  june: number;
-  july: number;
+interface ChartProps {
+  chartData: ChartDataInterface;
 }
 
-interface ChartDataInterface {
-  storeId: number;
-  totalMonthIncome: string;
-  store: string;
-  data: DataInterface[];
-}
-
-export function Chart({ chartData }: any) {
+export function Chart({ chartData }: ChartProps) {
   return (
     <S.Container>
       <S.ChartTopInfoContainer>
