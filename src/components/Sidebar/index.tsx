@@ -18,7 +18,17 @@ export function Sidebar() {
   return (
     <S.Container>
       <S.LogoContainer>
-        <S.Logo src={dashboardLogo} />
+        <S.LogoLink
+          href="https://site.bagy.com.br/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <S.Logo
+            src={dashboardLogo}
+            title="Ir para o site da Bagy"
+            alt="Dashboard Bagy"
+          />
+        </S.LogoLink>
       </S.LogoContainer>
       <S.Navigation>
         <S.MenuList>

@@ -5,7 +5,13 @@ import profileImage from "../../assets/profileImage.jpg";
 import * as S from "./styles";
 import { HamburguerIcon } from "../HamburguerIcon";
 
-export function PageHeader({ title, show, setShow }: any) {
+interface PageHeaderInterface {
+  title?: string;
+  show: boolean;
+  setShow: React.Dispatch<React.SetStateAction<boolean>>;
+}
+
+export function PageHeader({ title, show, setShow }: PageHeaderInterface) {
   return (
     <S.Container>
       <S.PageTitleAndHamburguerContainer>

@@ -17,7 +17,7 @@ export function PageWrapper({ children, title }: PageWrapperProps) {
   return (
     <S.Container>
       <Sidebar />
-      <MobileSidebar show={show} />
+      <MobileSidebar show={show} setShow={setShow} />
       <S.PageContent>
         <PageHeader title={title} show={show} setShow={setShow} />
         {children}

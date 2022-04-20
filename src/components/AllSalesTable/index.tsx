@@ -6,11 +6,11 @@ import * as S from "./styles";
 
 interface AllSalesTableProps {
   allSales: AllSalesInterface;
-  setType: any;
+  setType: React.Dispatch<React.SetStateAction<string>>;
 }
 
 export function AllSalesTable({ allSales, setType }: AllSalesTableProps) {
-  const handleChange = (e: any) => {
+  const handleChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     setType(e.target.value);
   };
 

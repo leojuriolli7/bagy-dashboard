@@ -1,13 +1,21 @@
-import { useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import * as S from "./styles";
+import exitButtonImage from "../../assets/exitButton.svg";
 
-export function MobileSidebar({ show }: any) {
+interface MobileSideBarProps {
+  show: boolean;
+  setShow: React.Dispatch<React.SetStateAction<boolean>>;
+}
+
+export function MobileSidebar({ show, setShow }: MobileSideBarProps) {
   const history = useLocation();
   const navigate = useNavigate();
 
   return (
     <S.NavContainer show={show}>
+      <S.ExitButtonContainer>
+        <S.ExitButton onClick={() => setShow(!show)} src={exitButtonImage} />
+      </S.ExitButtonContainer>
       <S.StyledMenu>
         <S.LinksList>
           <S.ListItem>
@@ -15,7 +23,7 @@ export function MobileSidebar({ show }: any) {
               onClick={() => navigate("/")}
               isSelected={history.pathname === "/"}
             >
-              Visao Geral
+              Visão Geral
             </S.Link>
           </S.ListItem>
           <S.ListItem>
@@ -65,7 +73,7 @@ export function MobileSidebar({ show }: any) {
               onClick={() => navigate("/configuracoes")}
               isSelected={history.pathname === "/configuracoes"}
             >
-              Configuracoes
+              Configurações
             </S.Link>
           </S.ListItem>
 

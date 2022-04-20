@@ -59,7 +59,14 @@ export const MonthlyIncomeStatusText = styled(
   color: ${({ status }) => (status === "positive" ? "#219653" : "red")};
 `;
 
-export const GraphInfoSelect = styled.select`
+export const InfoSelectedUnderline = styled(InfoSelected)`
+  background: url(${arrowSvg}) bottom right no-repeat #fff;
+  padding-right: 13px;
+  padding-bottom: 2px;
+  text-decoration: underline;
+`;
+
+export const ChartInfoSelect = styled.select`
   position: relative;
   appearance: none;
   border: none;
@@ -67,10 +74,11 @@ export const GraphInfoSelect = styled.select`
   background: url(${arrowSvg}) bottom right no-repeat #fff;
   font-size: 1.6rem;
   padding-right: 15px;
-  padding-bottom: 3px;
+  padding-bottom: 2px;
   color: black;
   font-weight: 700;
   margin-top: 5px;
+  text-align: center;
   text-decoration: underline;
 `;
 

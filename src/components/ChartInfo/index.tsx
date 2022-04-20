@@ -1,4 +1,3 @@
-import { useState } from "react";
 import {
   ChartDataInterface,
   UserStoresInterface,
@@ -7,7 +6,7 @@ import * as S from "./styles";
 
 interface ChartInfoProps {
   userStores: UserStoresInterface[];
-  setStoreId: any;
+  setStoreId: React.Dispatch<React.SetStateAction<number>>;
   chartData: ChartDataInterface;
 }
 
@@ -16,59 +15,73 @@ export function ChartInfo({
   setStoreId,
   chartData,
 }: ChartInfoProps) {
-  const handleChange = (e: any) => {
-    setStoreId(e.target.value);
+  const handleChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    setStoreId(Number(e.target.value));
   };
 
-  const [currentMonthSum, setCurrentMonthSum] = useState(0);
+  // const statusCalculation =
+  //   Number(
+  //     chartData?.totalMonthIncome
+  //       .replace(".", "")
+  //       .substring(0, chartData.lastMonthIncome.length - 4)
+  //   ) -
+  //   Number(
+  //     chartData?.lastMonthIncome
+  //       .replace(".", "")
+  //       .substring(0, chartData.lastMonthIncome.length - 4)
+  //   );
 
-  const statusCalculation =
-    Number(
-      chartData?.totalMonthIncome
-        .replace(".", "")
-        .substring(0, chartData.lastMonthIncome.length - 4)
-    ) -
-    Number(
-      chartData?.lastMonthIncome
-        .replace(".", "")
-        .substring(0, chartData.lastMonthIncome.length - 4)
-    );
+  const sumCurrentMonth = chartData.data.reduce(
+    (accumulator: any, object: any) => {
+      return accumulator + object.july;
+    },
+    0
+  );
+
+  const sumLastMonth = chartData.data.reduce(
+    (accumulator: any, object: any) => {
+      return accumulator + object.june;
+    },
+    0
+  );
 
   return (
     <S.Container>
       <S.ItemContainer>
         <S.InfoTitle>Loja</S.InfoTitle>
-        <S.GraphInfoSelect onChange={(e) => handleChange(e)}>
+        <S.ChartInfoSelect onChange={(e) => handleChange(e)}>
           {userStores.map((store: UserStoresInterface) => (
             <S.SelectOption value={store.id} key={store.id}>
               {store.storeName}
             </S.SelectOption>
           ))}
-        </S.GraphInfoSelect>
+        </S.ChartInfoSelect>
       </S.ItemContainer>
       <S.ItemContainer>
-        <S.InfoTitle>Mes</S.InfoTitle>
-        <S.InfoSelected>Julho</S.InfoSelected>
+        <S.InfoTitle>Mês</S.InfoTitle>
+        <S.InfoSelectedUnderline>Julho</S.InfoSelectedUnderline>
       </S.ItemContainer>
       <S.ItemContainer>
         <S.InfoTitle>Ano</S.InfoTitle>
-        <S.InfoSelected>2020</S.InfoSelected>
+        <S.InfoSelectedUnderline>2020</S.InfoSelectedUnderline>
       </S.ItemContainer>
       <S.ItemContainer>
         <S.InfoTitle>Total de faturamento</S.InfoTitle>
         <S.InfoSelected>
-          {chartData?.totalMonthIncome
-            ? `R$${chartData.totalMonthIncome}`
+          {chartData?.data
+            ? `R$${sumCurrentMonth - sumLastMonth}.000,00`
             : "Indisponivel"}
         </S.InfoSelected>
       </S.ItemContainer>
       <S.ItemContainer>
-        <S.InfoTitle>Analise comparativa</S.InfoTitle>
-        {chartData?.totalMonthIncome ? (
+        <S.InfoTitle>Análise comparativa</S.InfoTitle>
+        {chartData?.data ? (
           <S.MonthlyIncomeStatusText
-            status={statusCalculation > 0 ? "positive" : "negative"}
+            status={
+              sumCurrentMonth - sumLastMonth > 0 ? "positive" : "negative"
+            }
           >
-            {statusCalculation > 0 ? "Positivo" : "Negativo"}
+            {sumCurrentMonth - sumLastMonth > 0 ? "Positivo" : "Negativo"}
           </S.MonthlyIncomeStatusText>
         ) : (
           <S.InfoSelected>Indisponível</S.InfoSelected>

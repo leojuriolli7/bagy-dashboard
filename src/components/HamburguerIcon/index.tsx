@@ -1,6 +1,11 @@
 import * as S from "./styles";
 
-export function HamburguerIcon({ show, setShow }: any) {
+interface HamburguerIconProps {
+  show: boolean;
+  setShow: React.Dispatch<React.SetStateAction<boolean>>;
+}
+
+export function HamburguerIcon({ show, setShow }: HamburguerIconProps) {
   return (
     <S.BurguerMenuContainer show={show} onClick={() => setShow(!show)}>
       <S.BurguerLines />

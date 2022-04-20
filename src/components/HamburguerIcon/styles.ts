@@ -6,7 +6,7 @@ export const BurguerMenuContainer = styled.button<ShowInterface>`
   flex-direction: column;
   justify-content: space-around;
   position: absolute;
-  top: 40px;
+  top: 38px;
   left: 2rem;
   width: 2rem;
   height: 2rem;
@@ -18,6 +18,10 @@ export const BurguerMenuContainer = styled.button<ShowInterface>`
 
   @media (max-width: 840px) {
     display: flex;
+  }
+
+  @media (max-width: 720px) {
+    top: 40px;
   }
 
   &:focus {

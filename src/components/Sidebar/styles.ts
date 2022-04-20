@@ -24,7 +24,16 @@ export const LogoContainer = styled.div`
   padding-left: 27px;
 `;
 
-export const Logo = styled.img``;
+export const LogoLink = styled.a``;
+
+export const Logo = styled.img`
+  transition: 0.3s;
+
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+  }
+`;
 
 export const Navigation = styled.nav`
   width: 100%;
@@ -45,10 +54,12 @@ export const ListItem = styled.li<ListItemProps>`
   border: ${(props) => props.isSelected && "1px solid white"};
   border-left: ${(props) => props.isSelected && "3px solid #FC3C8D"};
   padding: ${(props) => (props.isSelected ? "17px 24px" : "18px 27px")};
+  transition: 0.3s;
 
   &:hover {
     cursor: pointer;
-    filter: brightness(1.1);
+    ${({ isSelected }) =>
+      isSelected ? "filter: brightness(1.1);" : "background-color: #DFE0EB10;"}
   }
 `;
 

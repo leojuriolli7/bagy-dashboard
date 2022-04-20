@@ -24,8 +24,25 @@ export const NavContainer = styled.div<ShowInterface>`
   }
 `;
 
+export const ExitButtonContainer = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 14px;
+  filter: invert(98%) sepia(98%) saturate(7%) hue-rotate(140deg)
+    brightness(102%) contrast(104%);
+`;
+
+export const ExitButton = styled.img`
+  width: 20px;
+`;
+
 export const StyledMenu = styled.nav`
-  margin-top: 50px;
+  margin-top: 30px;
+
+  @media (max-width: 425px) {
+    margin: 0;
+  }
 `;
 
 export const LinksList = styled.ul`
