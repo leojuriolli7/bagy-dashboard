@@ -86,7 +86,7 @@ export const ProductData = styled.td`
     padding: 30px 10px 25px 0;
   }
 
-  @media (max-width: 360px) {
+  @media (max-width: 378px) {
     padding-right: 4px;
   }
 `;

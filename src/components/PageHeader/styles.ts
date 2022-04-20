@@ -42,6 +42,12 @@ export const SearchAndNotificationsContainer = styled.div`
   align-items: center;
   gap: 23px;
 
+  img {
+    &:hover {
+      filter: brightness(0) saturate(100%) invert(33%) sepia(70%)
+        saturate(2167%) hue-rotate(314deg) brightness(104%) contrast(98%);
+    }
+  }
   @media (max-width: 434px) {
     display: none;
   }

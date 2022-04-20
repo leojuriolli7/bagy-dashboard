@@ -97,7 +97,7 @@ export const SalesTableSelect = styled.select`
   margin: 0;
   font-family: inherit;
   font-size: inherit;
-  cursor: inherit;
+  cursor: pointer;
   line-height: inherit;
 `;
 

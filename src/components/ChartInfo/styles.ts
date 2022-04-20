@@ -77,13 +77,14 @@ export const ChartInfoSelect = styled.select`
   outline: none;
   background: url(${arrowSvg}) bottom right no-repeat #fff;
   font-size: 1.6rem;
-  padding-right: 15px;
-  padding-bottom: 2px;
+  padding-right: 4px;
+  padding-bottom: 4px;
   color: black;
   font-weight: 700;
   margin-top: 5px;
   text-align: center;
   text-decoration: underline;
+  cursor: pointer;
 `;
 
 export const SelectOption = styled.option``;
