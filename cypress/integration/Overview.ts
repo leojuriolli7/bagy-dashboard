@@ -7,10 +7,8 @@ describe("Testing the Overview page selectors and data", () => {
   });
 
   it("Select a new store on the chart", () => {
-    cy.intercept({
-      method: "GET",
-      url: "/chartInfo*",
-      hostname: "localhost",
+    cy.intercept("GET", "/chartInfo*", (req) => {
+      delete req.headers["if-none-match"];
     }).as("chartInfo");
 
     cy.get("[data-cy=select-stores]")
@@ -45,10 +43,8 @@ describe("Testing the Overview page selectors and data", () => {
   });
 
   it("Select a new period on the all sales section", () => {
-    cy.intercept({
-      method: "GET",
-      url: "/all-sales*",
-      hostname: "localhost",
+    cy.intercept("GET", "/all-sales*", (req) => {
+      delete req.headers["if-none-match"];
     }).as("allSales");
 
     cy.get("[data-cy=select-sales-period]")
